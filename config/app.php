@@ -123,4 +123,6 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'mailpit_zerops_subdomain' => env('mailpit_zeropsSubdomain', null),
+
 ];
