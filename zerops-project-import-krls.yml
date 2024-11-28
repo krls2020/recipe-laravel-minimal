@@ -5,6 +5,7 @@ project:
     - zerops-recipe
     - development
 
+#yamlPreprocessor=on
 services:
   - hostname: app
     type: php-nginx@8.3
