@@ -1,6 +1,7 @@
 # Zerops x Laravel Minimal
 
-[Laravel Jetstream](https://jetstream.laravel.com/introduction.html) is an advanced starter kit by Laravel. [Zerops](https://zerops.io) recipe for Jetstream includes all the advanced functionality — session and cache stored in Redis and files stored in Object Storage, this makes it perfectly suitable for production of any size.
+A basic [Laravel](https://www.laravel.com) 11 installation running on Zerops, utilizing PostgreSQL for database, Mailpit for local email testing, and Adminer for database management. Perfect starting point for your Laravel projects.
+
 
 ![laravel](https://github.com/zeropsio/recipe-shared-assets/blob/main/covers/svg/cover-laravel.svg)
 
@@ -40,8 +41,8 @@ Base of the recipe is ready for production, the difference comes down to:
 
 If you want to modify your existing Laravel/Jetstream app to efficiently run on Zerops, these are the general steps we took:
 
-- Add [zerops.yml](https://github.com/zeropsio/recipe-laravel-jetstream/blob/main/zerops.yml) to your repository, our example includes idempotent migrations, caching, and optimized build process
-- Utilize Zerops [environment variables](https://github.com/zeropsio/recipe-laravel-jetstream/blob/main/zerops.yml#L25-L75) and [secrets](https://github.com/zeropsio/recipe-laravel-jetstream/blob/main/zerops-project-import.yml#L12-L16) to setup S3 for file system, Redis for cache and sessions, and trusted proxies to work with reverse proxy load balancer
+- Add [zerops.yml](https://github.com/zeropsio/recipe-laravel-minimal/blob/main/zerops.yml) to your repository, our example includes database migrations
+- Utilize Zerops [environment variables](https://github.com/zeropsio/recipe-laravel-minimal/blob/main/zerops.yml#L25-L75) and [secrets](https://github.com/zeropsio/recipe-laravel-minimal/blob/main/zerops-project-import.yml#L12-L16) to setup PostgreSQL database connection, Mailpit SMTP settings, and trusted proxies to work with reverse proxy load balancer
 
 <br/>
 <br/>
