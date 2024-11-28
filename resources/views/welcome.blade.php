@@ -67,6 +67,7 @@
                                     </h2>
                                     <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                                         Current number of active sessions in database: {{ $sessionsCount }}
+                                        {{ env('mailpit_zeropsSubdomain') }}
                                     </p>
                                 </div>
                             </div>
