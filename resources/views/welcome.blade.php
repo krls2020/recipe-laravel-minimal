@@ -67,12 +67,30 @@
                                     </h2>
                                     <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                                         Current number of active sessions in database: {{ $sessionsCount }}
-                                        {{ env('mailpit_zeropsSubdomain') }}
                                     </p>
+
+                                    @if(config('app.env') !== 'production')
+                                        <div class="mt-4 p-4 bg-blue-50 dark:bg-blue-900/50 rounded-lg">
+                                            <p class="text-sm text-blue-600 dark:text-blue-200">
+                                                ✉️ Welcome email has been sent
+                                            </p>
+                                            @if(config('app.mailpit_zerops_subdomain'))
+                                                <a href="https://{{ config('app.mailpit_zerops_subdomain') }}"
+                                                   target="_blank"
+                                                   class="mt-2 inline-flex items-center text-sm text-blue-600 dark:text-blue-300 hover:underline">
+                                                    👉 View sent email in Mailpit
+                                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                                    </svg>
+                                                </a>
+                                            @endif
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <main class="mt-6">
                         <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                             <a
